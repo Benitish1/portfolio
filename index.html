@@ -1,616 +1,868 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <title> Benitha Ishimwe &mdash; Frontend Developer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en" class="no-js" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benitha Ishimwe — Full-Stack & Mobile Developer</title>
+  <meta name="description" content="Benitha Ishimwe — Full-Stack Developer and Mobile Application Developer (React Native, Expo, React, Next.js, Spring Boot, Node.js). Graduate of Rwanda Coding Academy, Software Programming and Embedded Systems.">
+  <meta name="author" content="Benitha Ishimwe">
+  <meta name="theme-color" content="#0b0d10">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="html, css, javascript, jquery">
-    <meta name="author" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Benitha Ishimwe — Full-Stack & Mobile Developer">
+  <meta property="og:description" content="Mobile apps with React Native & Expo, full-stack web apps, APIs and databases. Graduate of Rwanda Coding Academy.">
+  <meta property="og:image" content="images/profile.jpg">
 
-    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/vendor/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/aos.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
-    
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e8eaee'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%230b0d10'%3EBI%3C/text%3E%3C/svg%3E">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  </head>
-  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.remove('no-js');
+      try {
+        var q = /[?&]theme=(light|dark)/.exec(location.search);
+        var t = q ? q[1] : localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 
-    <nav class="unslate_co--site-mobile-menu">
-      <div class="close-wrap d-flex">
-        <a href="#" class="d-flex ml-auto js-menu-toggle">
-          <span class="close-label">Close</span>
-          <div class="close-times">
-            <span class="bar1"></span>
-            <span class="bar2"></span>
-          </div>
-        </a>
-      </div>
-      <div class="site-mobile-inner"></div>
-    </nav>
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
 
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.2 4.2L19 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M3 9h18M9 9v11"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3.5" y="13.5" width="17" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7.5 7h.01M7.5 17h.01"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M4.5 5.5v13c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-13M4.5 12c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 12.6l-1.3 1.3a4 4 0 0 1-5.4.2L7 21.4a2 2 0 0 1-2.8-2.8l7.3-7.3a4 4 0 0 1 .2-5.4L13 4.6Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3.5h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.4 6.4l1.5-2.3 4.6 1.8V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m2 9 10-5 10 5-10 5L2 9Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-repo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5v-15ZM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.8 6.6 19.6l1.1-6L3.2 9.4l6.1-.8L12 3Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 5.98V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4V9.75Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  </svg>
 
-    <div class="unslate_co--site-wrap">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="unslate_co--site-inner">
+  <!-- ===================== Header ===================== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Benitha Ishimwe — home">
+        <span class="brand-mark">BI</span>
+        <span class="brand-name">Benitha Ishimwe</span>
+      </a>
 
-        <div class="lines-wrap">
-          <div class="lines-inner">
-            <div class="lines"></div>
-          </div>
-        </div>
-        <!-- END lines -->
-      
-      <nav class="unslate_co--site-nav site-nav-target">
-
-        <div class="container">
-        
-          <div class="row align-items-center justify-content-between text-left">
-            <div class="col-md-5 text-right">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li class="has-children">
-                  <a href="#home-section" class="nav-link">Home</a>
-                  <ul class="dropdown">
-                    <li>
-                      <a href="index.html">Hero Image BG</a>
-                    </li>
-                    <li>
-                      <a href="index-video.html">Video BG</a>
-                    </li>
-                    <li>
-                      <a href="index-hero-slider.html">Hero Slider</a>
-                    </li>
-                    <li>
-                      <a href="index-sidebar-menu.html">Sidebar Menu</a>
-                    </li>
-                    <li>
-                      <a href="index-right-menu.html">Right Menu</a>
-                    </li>
-                  </ul>
-                </li>
-                
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#skills-section" class="nav-link">Skills</a></li>
-              </ul>
-            </div>
-            <div class="site-logo pos-absolute">
-              <a href="index.html" class="unslate_co--site-logo">Start<span>.</span></a>
-            </div>
-            <div class="col-md-5 text-right text-lg-left">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#testimonial-section" class="nav-link">Testimonial</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              </ul>
-
-              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                <li><a href="#" class="js-menu-toggle">Menu</a></li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#mobile">Mobile</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#github">GitHub</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-      <!-- END nav -->
 
-      <div class="cover-v1 jarallax" style="background-image: url('images/ggg.png');" id="home-section">
-        <div class="container">
-          <div class="row align-items-center">
-              
-            <div class="col-md-7 mx-auto text-center">
-              <h1 class="heading gsap-reveal-hero"> Benitha Ishimwe | Frontend Developer</h1>
-              <h2 class="subheading gsap-reveal-hero">I’m Benitha Ishimwe, a Frontend Programmer and Designer</h2>
-            </div>
-
-          </div>
-        </div>
-
-
-        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
-          <span class="mouse">
-            <span class="scroll"></span>
-          </span>
-          <span class="mouse-label">Scroll</span>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle light and dark theme">
+          <svg class="icon-moon"><use href="#i-moon"/></svg>
+          <svg class="icon-sun"><use href="#i-sun"/></svg>
+        </button>
+        <a class="btn btn-ghost btn-sm" href="assets/Benitha_Ishimwe_CV.pdf" target="_blank" rel="noopener">
+          <svg><use href="#i-download"/></svg> CV
         </a>
-
+        <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1" target="_blank" rel="noopener">
+          <svg><use href="#i-github"/></svg> GitHub
+        </a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg><use href="#i-menu"/></svg>
+        </button>
       </div>
- 
-      <!-- END .cover-v1 -->
+    </div>
 
-
-      <div class="unslate_co--section" id="about-section">
-        <div class="container">
-          
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
-            <span class="gsap-reveal">
-            <img src="images/divider.png" alt="divider" width="76">
-            </span>
-          </div>
-          
-
-          <div class="row mt-5 justify-content-between">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-              <figure class="dotted-bg gsap-reveal-img ">
-                <img src="images/ggg.jpg" alt="Image" class="img-fluid">
-              </figure>
-            </div>
-            <div class="col-lg-4 pr-lg-5">
-              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Crafting Engaging Digital Experiences</span></h3>
-              <p class="lead gsap-reveal">I am a Frontend Developer with a passion for building intuitive, responsive, and visually appealing web applications.</p>
-              <p class="mb-4 gsap-reveal">With 3+ years of experience, I specialize in creating seamless user experiences using modern web technologies such as HTML, CSS, JavaScript, React, and Vue.js.</p>
-              <p class="gsap-reveal"><a href="images/Benitha ISHIMWE_Y2D_CV_Assignment.docx" class="btn btn-outline-pill btn-custom-light">Download my CV</a></p>
-            </div>
-          </div>
-        </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="#mobile">Mobile</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-dark" href="https://github.com/Benitish1" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> github.com/Benitish1</a>
+        <a class="btn btn-ghost" href="assets/Benitha_Ishimwe_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-download"/></svg> Download CV</a>
       </div>
+    </div>
+  </header>
 
-      <div class="unslate_co--section" id="services-section">
-        <div class="container">
+  <main id="main">
 
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Services</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-
-          <div class="row gutter-v3">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/004-percentage.svg" alt="Image" width="45">
-                </div>
-                <h3>Web <br> Development</h3>
-                <p>Building responsive and high-performing websites using modern frontend technologies.</p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/002-chat.svg" alt="Icon" width="45">
-                </div>
-                <h3>UI/UX <br> Design</h3>
-                <p>Creating visually appealing and user-friendly interfaces to enhance user experience.</p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
-                </div>
-                <h3>Frontend <br> Consulting</h3>
-                <p>Providing expert advice on frontend best practices, performance optimization, and scalability.</p>
-              </div> 
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/005-line-chart.svg" alt="Image" width="45">
-                </div>
-                <h3>Interactive <br> Web Applications</h3>
-                <p>Developing dynamic and engaging web applications with smooth animations and interactions.</p>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="unslate_co--section section-counter" id="skills-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Skills</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-
-          <div class="row pt-5">
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="99">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">HTML/CSS</span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="98">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">JavaScript</span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="95">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">React & Vue.js</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row pt-5">
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="97">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">UI/UX Design</span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="96">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Responsive Web Development</span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 mb-5 mb-lg-0 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="93">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">API Integration</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="unslate_co--section" id="portfolio-section">
-        <div class="container">
-          
-          
-          <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
-          <div id="portfolio-single-holder"></div>
-
-          <div class="portfolio-wrapper">
-
-            <div class="section-heading-wrap text-center mb-5">
-              <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Projects</span></h2>
-              <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-            </div>
-
-              <!-- <a href="#" class="text-white js-filter d-inline-block d-lg-none">Filter</a>
-              
-              <div class="filter-wrap">
-                <div class="filter ml-auto" id="filters">
-                  <a href="#" class="active" data-filter="*">All</a>
-                  <a href="#" data-filter=".web">Web</a>
-                  <a href="#" data-filter=".branding">Branding</a>
-                  <a href="#" data-filter=".illustration">Illustration</a>
-                  <a href="#" data-filter=".packaging">Packaging</a>
-                </div>
-              </div> -->
-            </div>
-
-
-            
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Weather App</h3>
-                        <p>Displays real-time weather updates</p>
-                      </div>
-                    </div>
-                    <img src="images/weather.png" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a class="portfolio-item isotope-item gsap-reveal-img" >
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-fledged online shopping experience</p>
-                      </div>` 
-                    </div>
-                    <img src="images/ecommerce.webp" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a  class="portfolio-item isotope-item gsap-reveal-img">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Chat Application</h3>
-                        <p>An interactive messaging app with instant updates</p>
-                      </div>
-                    </div>
-                    <img src="images/chat.jpg" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-
-                <a  class="portfolio-item isotope-item gsap-reveal-img" >
-                    <div class="overlay">
-                      <span class="wrap-icon icon-photo2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Dashboard Management</h3>
-                        <p> A productivity tool for tracking and managing daily tasks</p>
-                      </div>
-                    </div>
-                    <img src="images/dash.webp" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-
-              </div>
-
-              <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img" >
-                    <div class="overlay">
-                      <span class="wrap-icon icon-photo2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio with animations and smooth navigation</p>
-                      </div>
-                    </div>
-                    <img src="images/port.jpg" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img" >
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Blogging Platform</h3>
-                        <p>A modern blog system for content creators</p>
-                      </div>
-                    </div>
-                    <img src="images/blog.webp" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img" >
-                    <div class="overlay">
-                      <span class="wrap-icon icon-photo2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Job Board Website</h3>
-                        <p>A platform for job seekers and employers</p>
-                      </div>
-                    </div>
-                    <img src="images/job.jpg" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-play_circle_filled"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Expense Track App</h3>
-                        <p> A finance app with dynamic charts and reports.</p>
-                      </div>
-                    </div>
-                    <img src="images/expense.webp" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a class="portfolio-item isotope-item gsap-reveal-img">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-photo2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>Online booking Sytem</h3>
-                        <p>A web app for scheduling appointments and reservations</p>
-                      </div>
-                    </div>
-                    <img src="images/online.jpeg" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-            </div>
-            
-          </div>
-
-
-        </div>
-      </div>
-
-
-      <!-- <div class="unslate_co--section">
-        <div class="container">
-          <div class="owl-carousel logo-slider">
-            <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-google.png" alt="Image" class="img-fluid">
-            </div>
-            <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-puma.png" alt="Image" class="img-fluid">
-            </div>
-            <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-paypal.png" alt="Image" class="img-fluid">
-            </div>
-            <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-adobe.png" alt="Image" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-
-      <div class="unslate_co--section" id="testimonial-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Testimonials</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-        </div>
-
-      <div class="owl-carousel testimonial-slider" data-aos="fade-up">
+    <!-- ===================== Hero ===================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
         <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
-              <blockquote>
-                Benitha is an incredibly talented frontend developer. She has a keen eye for design and a deep understanding of web technologies. Working with her has always been a smooth and productive experience.
-              </blockquote>
-            </div>
-            <div class="testimonial-author-info">
-              <img src="images/liana.png" alt="Image">
-              <h3>Liana Teta</h3>
-              <span class="d-block position">Student at @RCA</span>
-            </div>
+          <span class="status-pill reveal"><span class="status-dot"></span> Rwanda Coding Academy graduate · Kigali, Rwanda</span>
+          <h1 class="reveal">Benitha Ishimwe</h1>
+          <p class="hero-role reveal">
+            <span>Full-Stack Developer</span><span class="sep"></span>
+            <span class="hl">Mobile Application Developer</span><span class="sep"></span>
+            <span>Software Programmer</span>
+          </p>
+          <p class="hero-intro reveal">
+            I build complete digital products — from mobile apps in React Native and Expo and
+            responsive web interfaces, to the REST APIs, authentication and database layers behind them.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects">View projects <svg><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-dark" href="https://github.com/Benitish1" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> GitHub profile</a>
+            <a class="btn btn-ghost" href="assets/Benitha_Ishimwe_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-download"/></svg> Download CV</a>
+          </div>
+          <div class="hero-meta reveal" aria-label="Core technologies">
+            <span class="tag is-accent">React Native</span>
+            <span class="tag is-accent">Expo</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React / Next.js</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
           </div>
         </div>
-        <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
-              <blockquote>
-                I have learned so much from Benitha. Her ability to break down complex frontend concepts and make them easy to understand is remarkable. She is an inspiring mentor and a great developer.
-              </blockquote>
-            </div>
-            <div class="testimonial-author-info">
-              <img src="images/acsah.png" alt="Image">
-              <h3>Acsah Iliza</h3>
-              <span class="d-block position">Student at @SOS</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
-              <blockquote>
-                Benitha's dedication to her craft is truly inspiring. Her frontend skills are top-notch, and she always strives for perfection in her work. I highly recommend her to anyone looking for a skilled and passionate developer.
-              </blockquote>
-            </div>
-            <div class="testimonial-author-info">
-              <img src="images/ciara.png" alt="Image">
-              <h3>Ciara Teta</h3>
-              <span class="d-block position">Student at @RCA</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
+        <div class="hero-visual hero-stack reveal" role="img" aria-label="Three of my mobile apps side by side: Lexora dictionary, SupaMenu food ordering and TWatch safety, with a push notification arriving">
+          <div class="hs-glow" aria-hidden="true"></div>
 
-      <div class="unslate_co--section" id="contact-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Get In Touch</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-
-
-          <div class="row justify-content-between">
-            
-            <div class="col-md-6">
-              <form method="post" class="form-outline-style-v1" id="contactForm">
-                <div class="form-group row mb-0">
-
-                  <div class="col-lg-6 form-group gsap-reveal">
-                    <label for="name">Name</label>
-                    <input name="name" type="text" class="form-control" id="name">
-                  </div>
-                  <div class="col-lg-6 form-group gsap-reveal">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" id="email">
-                  </div>
-                  <div class="col-lg-12 form-group gsap-reveal">
-                    <label for="message">Write your message...</label>
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
-                  </div>
-                </div>
-                <div class="form-group row gsap-reveal">
-                    <div class="col-md-12 d-flex align-items-center">
-                      <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
-                      <span class="submitting"></span>
-                    </div>
-                  </div>
-              </form>
-              <div id="form-message-warning" class="mt-4"></div> 
-              <div id="form-message-success">
-                Your message was sent, thank you!
+          <!-- Lexora (back, left) -->
+          <div class="phone hs-side hs-left" aria-hidden="true">
+            <div class="phone-screen lx">
+              <div class="lx-head">
+                <div class="lx-status"><span>11:05</span><span>●●●</span></div>
+                <div class="lx-brand"><span class="lx-menu"></span><b>📖 Lexora</b><span></span></div>
+                <strong class="lx-h">Discover every word</strong>
+                <div class="lx-search"><span>Search a word…</span><i></i></div>
               </div>
-
+              <div class="lx-welcome">
+                <div class="lx-book">📖</div>
+                <b>Welcome to Lexora</b>
+                <small>Your pocket dictionary: definitions, pronunciations and examples.</small>
+              </div>
+              <div class="lx-tiles"><span>Definitions</span><span>Pronunciation</span><span>History</span></div>
             </div>
+          </div>
 
-            <div class="col-md-4">
-              <div class="contact-info-v1">
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">📧 Email</span>
-                  <a href="#" class="contact-info-val">ibenitha36@gmail.com</a>
-                </div>
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">📞Phone</span>
-                  <a href="#" class="contact-info-val">+250 790 212 756</a>
-                </div>
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">📍Address</span>
-                  <address class="contact-info-val"> Kigali, Rwanda</address>
-                </div>
+          <!-- TWatch (back, right) -->
+          <div class="phone hs-side hs-right" aria-hidden="true">
+            <div class="phone-screen">
+              <div class="ps-status" style="color:#fff;position:relative;z-index:2"><span>9:41</span><span>●●●</span></div>
+              <div class="ps-header"><small>TWatch</small><strong>Your shield in every situation</strong></div>
+              <div class="ps-sos">SOS<span>Hold for help</span></div>
+              <div class="ps-grid">
+                <div class="ps-tile"><i class="c1"></i>Report incident</div>
+                <div class="ps-tile"><i class="c2"></i>Nearby alerts</div>
+                <div class="ps-tile"><i class="c3"></i>Safety tips</div>
+                <div class="ps-tile"><i class="c4"></i>My reports</div>
               </div>
             </div>
+          </div>
 
+          <!-- SupaMenu (front) -->
+          <div class="phone hs-front" aria-hidden="true">
+            <div class="phone-screen shot"><div class="shot-status"><span>9:41</span><span class="ss-icons"><i></i><i></i><b></b></span></div><img src="images/projects/supamenu.jpg" alt="" width="638" height="1280"></div>
+          </div>
+
+          <!-- Push notification (Mobile_Notification project) -->
+          <div class="notif-toast hs-toast" aria-hidden="true">
+            <span class="nt-icon"></span>
+            <div><b>Hello Benitha</b><small>This is a test notification!</small></div>
+            <em>now</em>
+          </div>
+
+          <span class="visual-caption">Lexora · SupaMenu · TWatch: React Native + Expo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Focus strip ===================== -->
+    <section aria-label="What I build">
+      <div class="container">
+        <div class="focus-grid reveal">
+          <div class="focus-item is-primary">
+            <div class="focus-icon"><svg><use href="#i-phone"/></svg></div>
+            <h3>Mobile apps</h3>
+            <p>React Native &amp; Expo apps with stack, tab and drawer navigation and auth flows.</p>
+          </div>
+          <div class="focus-item">
+            <div class="focus-icon"><svg><use href="#i-layout"/></svg></div>
+            <h3>Web interfaces</h3>
+            <p>Responsive React and Next.js frontends styled with Tailwind CSS.</p>
+          </div>
+          <div class="focus-item">
+            <div class="focus-icon"><svg><use href="#i-server"/></svg></div>
+            <h3>APIs &amp; backends</h3>
+            <p>REST services in Spring Boot, Express, FastAPI and Django with JWT auth.</p>
+          </div>
+          <div class="focus-item">
+            <div class="focus-icon"><svg><use href="#i-chip"/></svg></div>
+            <h3>Embedded &amp; IoT</h3>
+            <p>ESP8266, MQTT and computer vision connected to real hardware.</p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ===================== Mobile ===================== -->
+    <section class="section" id="mobile">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Mobile development</span>
+          <h2 class="section-title">Building for the phone first</h2>
+          <p class="section-lead">
+            My mobile work is built with React Native and Expo — focused on clear navigation,
+            reusable components and screens that feel at home on a small display.
+          </p>
+        </div>
+
+        <div class="app-grid">
+
+          <!-- SupaMenu -->
+          <article class="app-card reveal" style="--app:#f7931e">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="SupaMenu home screen: search bar, a 10% off banner and a list of popular restaurants">
+                <div class="phone-screen shot"><div class="shot-status"><span>9:41</span><span class="ss-icons"><i></i><i></i><b></b></span></div><img src="images/projects/supamenu.jpg" alt="" width="638" height="1280" loading="lazy"></div>
+              </div>
+              <span class="app-badge">New</span>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · Expo Router · NativeWind</span>
+              <h3>SupaMenu</h3>
+              <p>A food-ordering app: browse restaurants and menus, fill a cart, check out and track orders. Includes login and register, light and dark mode, and works fully offline with AsyncStorage.</p>
+              <div class="tags"><span class="tag">TypeScript</span><span class="tag">NativeWind</span><span class="tag">AsyncStorage</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/SupaMenu" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/SupaMenu</a>
+            </div>
+          </article>
+
+          <!-- Lexora -->
+          <article class="app-card reveal" style="--app:#6d28d9">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="Lexora result screen for the word Hour, with a pronunciation button and numbered definitions">
+                <div class="phone-screen lx">
+                  <div class="lx-head lx-head-sm">
+                    <div class="lx-status"><span>11:05</span><span>●●●</span></div>
+                    <div class="lx-bar"><i>←</i><div><small>You searched</small><b>Hour</b></div><i>⌕</i></div>
+                  </div>
+                  <div class="lx-word">
+                    <b>Hour</b><em>/ˈaʊə/</em>
+                    <div class="lx-audio"><span class="on">🔊</span><span>■</span><small>Tap to hear pronunciation</small></div>
+                    <div class="lx-accents"><span>UK</span><span>US</span></div>
+                  </div>
+                  <div class="lx-defs">
+                    <span class="lx-pos">noun</span>
+                    <p><b>1.</b> A time period of sixty minutes; one twenty-fourth of a day.<i>“I spent an hour at lunch.”</i></p>
+                    <p><b>2.</b> A season, moment, or time.</p>
+                    <p><b>3.</b> The time.</p>
+                  </div>
+                </div>
+              </div>
+              <span class="app-badge">New</span>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · Expo · REST API</span>
+              <h3>Lexora: Dictionary</h3>
+              <p>Search any English word for definitions, parts of speech, examples and UK / US audio pronunciation, powered by the Free Dictionary API. Search history lives in a custom drawer.</p>
+              <div class="tags"><span class="tag">Axios</span><span class="tag">expo-audio</span><span class="tag">Drawer nav</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/Dictionary_App" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/Dictionary_App</a>
+            </div>
+          </article>
+
+          <!-- TWatch -->
+          <article class="app-card reveal" style="--app:#2196f3">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="TWatch home screen with an emergency SOS button and shortcut tiles">
+                <div class="phone-screen">
+                  <div class="ps-status" style="color:#fff;position:relative;z-index:2"><span>9:41</span><span>●●●</span></div>
+                  <div class="ps-header"><small>Good evening</small><strong>Stay safe today</strong></div>
+                  <div class="ps-sos">SOS<span>Hold for help</span></div>
+                  <div class="ps-grid">
+                    <div class="ps-tile"><i class="c1"></i>Report incident</div>
+                    <div class="ps-tile"><i class="c2"></i>Nearby alerts</div>
+                    <div class="ps-tile"><i class="c3"></i>Safety tips</div>
+                    <div class="ps-tile"><i class="c4"></i>Contacts</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · Expo</span>
+              <h3>TWatch: Community Safety</h3>
+              <p>Report incidents, get nearby alerts and reach help with one-tap SOS. Full auth flow with OTP, a bottom-tab navigator with nested stacks, and a reusable component library.</p>
+              <div class="tags"><span class="tag">React Navigation</span><span class="tag">Reanimated</span><span class="tag">Context API</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/TWatch_Mobile_App" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/TWatch_Mobile_App</a>
+            </div>
+          </article>
+
+          <!-- Mobile Notifications -->
+          <article class="app-card reveal" style="--app:#0ea5a4">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="Notification demo: a Hello Benitha push notification drops in above a Send Notification button">
+                <div class="phone-screen nt">
+                  <div class="nt-status"><span>9:41</span><span>●●●</span></div>
+                  <div class="notif-toast nt-drop">
+                    <span class="nt-icon"></span>
+                    <div><b>Hello Benitha</b><small>This is a test notification!</small></div>
+                    <em>now</em>
+                  </div>
+                  <div class="nt-ring"><span></span></div>
+                  <div class="nt-btn">SEND NOTIFICATION</div>
+                </div>
+              </div>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · TypeScript</span>
+              <h3>Mobile Notifications</h3>
+              <p>Sends local push notifications with <span class="mono">expo-notifications</span> on Android and iOS, and falls back to the browser Notification API on the web.</p>
+              <div class="tags"><span class="tag">Expo</span><span class="tag">expo-notifications</span><span class="tag">Web API</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/Mobile_Notification" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/Mobile_Notification</a>
+            </div>
+          </article>
+
+          <!-- ShopEase -->
+          <article class="app-card reveal" style="--app:#1e90ff">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="ShopEase products screen with category filters and product cards with prices">
+                <div class="phone-screen se">
+                  <div class="se-status"><span>9:41</span><span>●●●</span></div>
+                  <div class="se-top"><span class="se-burger"></span><b>ShopEase</b><span class="se-cart">2</span></div>
+                  <div class="se-search">Search products…</div>
+                  <div class="se-cats"><span class="on">All</span><span>Phones</span><span>Laptops</span><span>Tablets</span></div>
+                  <div class="se-grid">
+                    <div class="se-item"><i class="g1">📱</i><b>Apple iPhone 14</b><em>$999</em><span>Add to cart</span></div>
+                    <div class="se-item"><i class="g2">🎧</i><b>Sony Headphones</b><em>$349</em><span>Add to cart</span></div>
+                    <div class="se-item"><i class="g3">💻</i><b>Dell XPS 13</b><em>$1199</em><span>Add to cart</span></div>
+                    <div class="se-item"><i class="g4">📟</i><b>iPad Air</b><em>$599</em><span>Add to cart</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · TypeScript</span>
+              <h3>ShopEase</h3>
+              <p>A shopping app built with Expo Router: drawer and tab navigation, category filters and search, a cart managed with React Context, and a history of submitted orders.</p>
+              <div class="tags"><span class="tag">Expo Router</span><span class="tag">Context API</span><span class="tag">Drawer nav</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/ShopEase" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/ShopEase</a>
+            </div>
+          </article>
+
+          <!-- ATELIER -->
+          <article class="app-card reveal" style="--app:#8b4513">
+            <div class="app-stage">
+              <div class="phone" role="img" aria-label="ATELIER fashion screen with a Timeless Classics banner and collection cards">
+                <div class="phone-screen at">
+                  <div class="at-status"><span>9:41</span><span>●●●</span></div>
+                  <div class="at-logo">ATELIER</div>
+                  <div class="at-hero"><small>Refined sophistication</small><b>Timeless Classics</b><span>Explore →</span></div>
+                  <div class="at-label">Collections</div>
+                  <div class="at-cols"><span>Autumn Elegance</span><span>Urban Chic</span><span>Vintage Revival</span></div>
+                  <div class="at-items">
+                    <div><i class="a1"></i><b>Cashmere Coat</b><small>Premium quality</small></div>
+                    <div><i class="a2"></i><b>Silk Evening Dress</b><small>Evening Luxe</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-body">
+              <span class="kicker">React Native · TypeScript</span>
+              <h3>ATELIER</h3>
+              <p>A fashion lookbook with an earthy, editorial style: featured collections, product cards and smooth scrolling. I built it as a study in mobile layout and visual design.</p>
+              <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">UI design</span></div>
+              <a class="repo-link" href="https://github.com/Benitish1/ATELIER" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/ATELIER</a>
+            </div>
+          </article>
+
+        </div>
+        <p class="preview-note">Phone previews are redrawn from each app's real screens and colours. SupaMenu shows an actual screenshot.</p>
       </div>
+    </section>
 
-      <footer class="unslate_co--footer unslate_co--section">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-7">
-              
-              <div class="footer-site-logo"><a href="#">Start<span>.</span></a></div>
+    <!-- ===================== Projects ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Featured projects</span>
+          <h2 class="section-title">Full-stack and systems work</h2>
+          <p class="section-lead">
+            Web platforms, APIs, data dashboards and hardware projects — each one linked to its source on GitHub.
+          </p>
+        </div>
 
-              <ul class="footer-site-social">
-                <li><a href="https://www.linkedin.com/in/benitha-ishimwe-16149a347/">LinkedIn</a></li>
-                <li><a href="https://x.com/Benitha36">Twitter</a></li>
-                <li><a href="https://www.instagram.com/benie_tha/">Instagram</a></li>
-                <li><a href="https://github.com/Benitish1">Github</a></li>
+        <div class="projects-grid">
+
+          <!-- SafeGuard -->
+          <article class="project-card reveal">
+            <div class="project-media has-bar sg-media" role="img" aria-label="SafeGuard sign-in page: Keep every building safe and compliant, next to a sign-in form">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>SafeGuard · Sign in</span></div>
+              <div class="sg" aria-hidden="true">
+                <div class="sg-left">
+                  <div class="sg-logo"><span>🔥</span>SafeGuard</div>
+                  <div class="sg-flame">🔥</div>
+                  <h4>Keep every building <em>safe &amp; compliant.</em></h4>
+                  <p>Track extinguishers, schedule inspections, log maintenance and generate real-time compliance reports.</p>
+                  <small>✓ Secured with JWT + OTP verification</small>
+                </div>
+                <div class="sg-right">
+                  <div class="sg-toggle"><i></i></div>
+                  <div class="sg-form">
+                    <b>Sign in</b>
+                    <small>Access your fire-safety dashboard.</small>
+                    <label>Email</label><div class="sg-in">✉ you@tzw.com</div>
+                    <label>Password</label><div class="sg-in">🔒 ••••••••</div>
+                    <div class="sg-btn">Sign in</div>
+                    <small class="sg-alt">No account? <em>Create one</em></small>
+                  </div>
+                </div>
+              </div>
+              <span class="media-badge">UI</span>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Full-stack web · Microservices</span>
+              <h3>SafeGuard — Fire Extinguisher Management</h3>
+              <p class="desc">A web platform for registering fire extinguishers and managing inspections, maintenance, reports and notifications across buildings.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>Node.js / Express microservices behind an API gateway with OpenAPI docs.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>JWT access &amp; refresh tokens, role-based access and OTP email verification.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>CSV / PDF report export and a React dashboard with dark &amp; light modes.</span></li>
               </ul>
+              <div class="tags">
+                <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+                <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1/SafeGuard_FEMS" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
 
-              <p class="site-copyright">Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved | This portfolio is made with <i class="icon-heart"
-                  aria-hidden="true"></i> by Benitha</a>
-            
-              
-              </p>
+          <!-- LuxeStay -->
+          <article class="project-card reveal">
+            <div class="project-media has-bar">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>luxe-stay-mu.vercel.app</span></div>
+              <div class="shimmer"></div>
+              <img src="images/projects/luxestay.jpg" alt="LuxeStay landing page with the headline Welcome to LuxeStay" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge">Live</span>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Full-stack web</span>
+              <h3>LuxeStay — Hotel Management System</h3>
+              <p class="desc">A hotel management platform with role-based access for admins, staff and guests, room management and an online booking workflow.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>FastAPI backend with SQLAlchemy models, Pydantic schemas and JWT auth.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Bookings that staff can confirm, complete or cancel; admin user management.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Next.js App Router frontend in TypeScript with a protected dashboard.</span></li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+                <span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">JWT</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-primary btn-sm" href="https://luxe-stay-mu.vercel.app/" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/Luxe-Stay" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
 
+          <!-- Vehicle Analytics -->
+          <article class="project-card reveal">
+            <div class="project-media has-bar">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>vehicle-analytics-system.onrender.com</span></div>
+              <div class="shimmer"></div>
+              <img src="images/projects/vehicle-analytics.jpg" alt="Vehicle Insights Dashboard showing the client clustering analysis page" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge">Live</span>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Data &amp; machine learning</span>
+              <h3>Vehicle Analytics System</h3>
+              <p class="desc">A Django dashboard that runs regression, classification and clustering models on vehicle data and presents the results visually.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>scikit-learn models for price prediction, client classification and K-Means segmentation.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Interactive Plotly charts, including a Rwanda district map from GeoJSON.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Live inference form that combines model outputs into a customer profile.</span></li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">Django</span><span class="tag">scikit-learn</span>
+                <span class="tag">pandas</span><span class="tag">Plotly</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-primary btn-sm" href="https://vehicle-analytics-system.onrender.com/" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/Vehicle_Analytics_System" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- RentEase -->
+          <article class="project-card reveal">
+            <div class="project-media" aria-hidden="true">
+              <div class="diagram">
+                <div class="d-caption">Role-based access</div>
+                <div class="d-roles">
+                  <div class="d-role"><b>Tenant</b><span>search · favorites · book</span></div>
+                  <div class="d-role"><b>Landlord</b><span>list &amp; manage properties</span></div>
+                  <div class="d-role"><b>Admin</b><span>users &amp; oversight</span></div>
+                </div>
+                <div class="d-arrow">↓</div>
+                <div class="d-row"><span class="d-node em">Next.js · TypeScript</span><span class="d-node solid">Spring Boot REST API</span><span class="d-node em">PostgreSQL</span></div>
+              </div>
+              <span class="media-badge">System overview</span>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Full-stack web · Java</span>
+              <h3>RentEase — Property Management</h3>
+              <p class="desc">A rental platform connecting tenants and landlords, with property listings, search and filtering, favorites, bookings and an admin role.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>Spring Boot REST API with Spring Security, JWT and JPA / Hibernate.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Controllers for properties, bookings, favorites, payments and chat.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Responsive Next.js frontend written in TypeScript with Tailwind CSS.</span></li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span>
+                <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1/Rent-Ease" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Face recognition + IoT lock -->
+          <article class="project-card reveal">
+            <div class="project-media" aria-hidden="true">
+              <div class="diagram">
+                <div class="d-row"><span class="d-node">Camera</span><span class="d-arrow">→</span><span class="d-node em">ArcFace · ONNX</span><span class="d-arrow">→</span><span class="d-node">MediaPipe tracking</span></div>
+                <div class="d-arrow">↓</div>
+                <div class="d-row"><span class="d-node solid">MQTT broker</span></div>
+                <div class="d-arrow">↓</div>
+                <div class="d-row"><span class="d-node em">ESP8266 · servo lock</span><span class="d-node">Node.js live dashboard</span></div>
+              </div>
+              <span class="media-badge">Pipeline</span>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Embedded · Computer vision · Team project</span>
+              <h3>Face Recognition &amp; IoT Locking System</h3>
+              <p class="desc">Recognises enrolled faces, tracks head movement and drives a servo on an ESP8266 over MQTT, with a web dashboard for live monitoring.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>Face enrolment and recognition with ArcFace embeddings run through ONNX Runtime.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>MicroPython on the ESP8266 subscribes to movement and lock commands.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Node.js backend bridging MQTT to a WebSocket dashboard with heartbeat status.</span></li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span>
+                <span class="tag">ESP8266</span><span class="tag">MQTT</span><span class="tag">Node.js</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1/Face_Locking_with_Motor" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- More -->
+          <article class="project-card reveal">
+            <div class="project-media" aria-hidden="true">
+              <div class="diagram">
+                <div class="d-caption">More on GitHub</div>
+                <div class="d-row"><span class="d-node">Auto Number Plate Recognition</span><span class="d-node">Utility Billing System</span></div>
+                <div class="d-row"><span class="d-node">Parking Management (C++ DSA)</span><span class="d-node">Farm Management · Django</span></div>
+                <div class="d-row"><span class="d-node">Printed Text Scanner</span><span class="d-node">Student Performance Model</span></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="kicker">Explore further</span>
+              <h3>More projects</h3>
+              <p class="desc">Beyond the highlights above, my GitHub includes computer-vision tools, Java and C++ systems, Django apps and machine-learning experiments.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>Number-plate recognition: detection, alignment, Tesseract OCR and validation.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Java utility billing and C++ parking management with data structures.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Robotics decoder and stepper-motor control code.</span></li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1?tab=repositories" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> All repositories</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Skills ===================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Technical skills</span>
+          <h2 class="section-title">Tools I build with</h2>
+          <p class="section-lead">Technologies I have used in my own projects, grouped by where they sit in the stack.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card is-featured reveal">
+            <header><span class="focus-icon"><svg><use href="#i-phone"/></svg></span><h3>Mobile development</h3></header>
+            <p class="note">Cross-platform apps for Android and iOS, from navigation structure to reusable UI components.</p>
+            <ul class="skill-list">
+              <li>React Native</li><li>Expo</li><li>Expo Router</li><li>React Navigation — stack, tabs, drawer</li>
+              <li>TypeScript</li><li>JavaScript</li><li>Context API</li><li>Reanimated</li><li>Expo Notifications</li>
+              <li>Mobile-first UI</li><li>Authentication flows</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <header><span class="focus-icon"><svg><use href="#i-layout"/></svg></span><h3>Frontend</h3></header>
+            <ul class="skill-list">
+              <li>React</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+              <li>Tailwind CSS</li><li>Bootstrap</li><li>Vite</li><li>Responsive design</li>
+            </ul>
+          </article>
+          <article class="skill-card is-wide reveal">
+            <header><span class="focus-icon"><svg><use href="#i-server"/></svg></span><h3>Backend</h3></header>
+            <ul class="skill-list">
+              <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Node.js</li><li>Express</li>
+              <li>Python</li><li>Django</li><li>FastAPI</li><li>REST APIs</li><li>JWT auth</li><li>Swagger / OpenAPI</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <header><span class="focus-icon"><svg><use href="#i-db"/></svg></span><h3>Databases</h3></header>
+            <ul class="skill-list">
+              <li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>SQL</li><li>Hibernate / JPA</li><li>SQLAlchemy</li><li>Sequelize</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <header><span class="focus-icon"><svg><use href="#i-tool"/></svg></span><h3>Tools</h3></header>
+            <ul class="skill-list">
+              <li>Git</li><li>GitHub</li><li>Postman</li><li>Maven</li><li>Docker</li><li>VS Code</li><li>IntelliJ IDEA</li><li>Figma</li>
+            </ul>
+          </article>
+          <article class="skill-card is-wide reveal">
+            <header><span class="focus-icon"><svg><use href="#i-chip"/></svg></span><h3>Embedded &amp; AI</h3></header>
+            <ul class="skill-list">
+              <li>ESP8266</li><li>MQTT</li><li>IoT</li><li>C / C++</li><li>MicroPython</li><li>Robotics</li>
+              <li>OpenCV</li><li>MediaPipe</li><li>scikit-learn</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== About ===================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="code-card" role="img" aria-label="A code snippet describing Benitha: software programmer based in Kigali, building mobile, web, backend and embedded projects">
+            <div class="code-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="code-file">benitha.ts</span>
+            </div>
+<pre class="code-body" aria-hidden="true"><code><span class="ln">1</span><span class="k">const</span> <span class="v">benitha</span> = {
+<span class="ln">2</span>  role: <span class="s">"Software Programmer"</span>,
+<span class="ln">3</span>  base: <span class="s">"Kigali, Rwanda"</span>,
+<span class="ln">4</span>  stack: {
+<span class="ln">5</span>    mobile:   [<span class="s">"React Native"</span>, <span class="s">"Expo"</span>],
+<span class="ln">6</span>    web:      [<span class="s">"React"</span>, <span class="s">"Next.js"</span>],
+<span class="ln">7</span>    backend:  [<span class="s">"Spring Boot"</span>, <span class="s">"Node.js"</span>],
+<span class="ln">8</span>    hardware: [<span class="s">"ESP8266"</span>, <span class="s">"MQTT"</span>],
+<span class="ln">9</span>  },
+<span class="ln">10</span>  <span class="c">// what gets me started</span>
+<span class="ln">11</span>  drive: <span class="s">"real problems"</span>,
+<span class="ln">12</span>  available: <span class="b">true</span>,
+<span class="ln">13</span>};<span class="cursor"></span></code></pre>
+          </div>
+          <div class="about-badge"><svg><use href="#i-cap"/></svg> Rwanda Coding Academy · Class of 2026</div>
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow reveal">About me</span>
+          <h2 class="section-title reveal" style="margin-bottom:24px">Software programmer, from interface to infrastructure</h2>
+          <p class="lead reveal">
+            I'm a graduate of Rwanda Coding Academy, where I studied Software Programming and Embedded Systems.
+          </p>
+          <p class="reveal">
+            I enjoy working across the whole development process: shaping interfaces and mobile experiences,
+            writing the backend services and APIs that power them, and designing the databases underneath.
+            Most of my recent work has been in React Native with Expo, alongside web projects in React and Next.js
+            with Spring Boot, Node.js and Python backends.
+          </p>
+          <p class="reveal">
+            My embedded systems training means I'm also comfortable when software has to talk to hardware —
+            microcontrollers, sensors and MQTT messaging. What draws me to a project is a real problem
+            to solve, whether that's community safety, property rentals or fire-safety compliance.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-card reveal">
+              <div class="label">Education</div>
+              <div class="value">Rwanda Coding Academy</div>
+              <div class="sub">Software Programming &amp; Embedded Systems · 2023 – July 2026</div>
+            </div>
+            <div class="info-card reveal">
+              <div class="label">Focus</div>
+              <div class="value">Full-stack &amp; mobile</div>
+              <div class="sub">React Native, React / Next.js, Spring Boot, Node.js</div>
+            </div>
+            <div class="info-card reveal">
+              <div class="label">Location</div>
+              <div class="value">Kigali, Rwanda</div>
+              <div class="sub">Open to remote collaboration</div>
+            </div>
+            <div class="info-card reveal">
+              <div class="label">Languages</div>
+              <div class="value">Kinyarwanda, English</div>
+              <div class="sub">Basic / working French</div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
 
-      
+    <!-- ===================== GitHub activity ===================== -->
+    <section class="section" id="github">
+      <div class="container">
+        <div class="gh-head">
+          <div class="section-head reveal" style="margin-bottom:0">
+            <span class="eyebrow">Open source</span>
+            <h2 class="section-title">Recently on GitHub</h2>
+            <p class="section-lead">Pulled live from my public profile.</p>
+          </div>
+          <div class="gh-stats reveal" aria-live="polite">
+            <div class="gh-stat"><b id="gh-repos">—</b><span>public repositories</span></div>
+            <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1" target="_blank" rel="noopener" style="align-self:center"><svg><use href="#i-github"/></svg> @Benitish1</a>
+          </div>
+        </div>
+
+        <div class="repo-grid" id="repo-grid" aria-busy="true">
+          <!-- Skeletons (replaced by JS) -->
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:60%"></div><div class="sk" style="height:12px;width:90%;margin-top:14px"></div><div class="sk" style="height:12px;width:70%;margin-top:8px"></div></div>
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:50%"></div><div class="sk" style="height:12px;width:85%;margin-top:14px"></div><div class="sk" style="height:12px;width:60%;margin-top:8px"></div></div>
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:65%"></div><div class="sk" style="height:12px;width:80%;margin-top:14px"></div><div class="sk" style="height:12px;width:55%;margin-top:8px"></div></div>
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:55%"></div><div class="sk" style="height:12px;width:90%;margin-top:14px"></div><div class="sk" style="height:12px;width:65%;margin-top:8px"></div></div>
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:45%"></div><div class="sk" style="height:12px;width:75%;margin-top:14px"></div><div class="sk" style="height:12px;width:50%;margin-top:8px"></div></div>
+          <div class="repo-card skeleton"><div class="sk" style="height:18px;width:60%"></div><div class="sk" style="height:12px;width:85%;margin-top:14px"></div><div class="sk" style="height:12px;width:60%;margin-top:8px"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Testimonials ===================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kind words</span>
+          <h2 class="section-title">From people I've worked with</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>Benitha is an incredibly talented frontend developer. She has a keen eye for design and a deep understanding of web technologies. Working with her has always been a smooth and productive experience.</blockquote>
+            <footer><img src="images/liana.png" alt="" loading="lazy"><div><b>Liana Teta</b><span>Student, Rwanda Coding Academy</span></div></footer>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>I have learned so much from Benitha. Her ability to break down complex frontend concepts and make them easy to understand is remarkable. She is an inspiring mentor and a great developer.</blockquote>
+            <footer><img src="images/acsah.png" alt="" loading="lazy"><div><b>Acsah Iliza</b><span>Student, SOS</span></div></footer>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>Benitha's dedication to her craft is truly inspiring. Her frontend skills are top-notch, and she always strives for perfection in her work. I highly recommend her to anyone looking for a skilled and passionate developer.</blockquote>
+            <footer><img src="images/ciara.png" alt="" loading="lazy"><div><b>Ciara Teta</b><span>Student, Rwanda Coding Academy</span></div></footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head reveal" style="margin-bottom:0">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Let's build something</h2>
+            <p class="section-lead">I'm open to roles, internships and collaborations in mobile and full-stack development. The quickest way to reach me is email or phone.</p>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item reveal">
+              <span class="ci-icon"><svg><use href="#i-mail"/></svg></span>
+              <a href="mailto:ibenitha36@gmail.com"><span class="ci-label">Email</span><br><span class="ci-value">ibenitha36@gmail.com</span></a>
+              <button class="icon-btn ci-action js-copy" type="button" data-copy="ibenitha36@gmail.com" aria-label="Copy email address"><svg><use href="#i-copy"/></svg></button>
+            </div>
+            <div class="contact-item reveal">
+              <span class="ci-icon"><svg><use href="#i-call"/></svg></span>
+              <a href="tel:+250792584836"><span class="ci-label">Phone</span><br><span class="ci-value">+250 792 584 836</span></a>
+              <button class="icon-btn ci-action js-copy" type="button" data-copy="+250792584836" aria-label="Copy phone number"><svg><use href="#i-copy"/></svg></button>
+            </div>
+            <a class="contact-item reveal" href="https://github.com/Benitish1" target="_blank" rel="noopener">
+              <span class="ci-icon"><svg><use href="#i-github"/></svg></span>
+              <span><span class="ci-label">GitHub</span><br><span class="ci-value">github.com/Benitish1</span></span>
+            </a>
+            <div class="contact-item reveal">
+              <span class="ci-icon"><svg><use href="#i-pin"/></svg></span>
+              <span><span class="ci-label">Location</span><br><span class="ci-value">Kigali, Rwanda</span></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Send a message</h3>
+          <p>This opens your email app with the message ready to send.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+              <span class="err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+              <span class="err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+            <span class="err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn-primary" type="submit"><svg><use href="#i-mail"/></svg> Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Benitha Ishimwe · Full-Stack &amp; Mobile Developer</p>
+      <div class="socials">
+        <a href="https://github.com/Benitish1" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/benitha-ishimwe-16149a347/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+        <a href="https://x.com/Benitha36" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#i-x"/></svg></a>
+        <a href="https://www.instagram.com/benie_tha/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+      </div>
     </div>
+  </footer>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <div id="unslate_co--overlayer"></div>
-    <div class="site-loader-wrap">
-      <div class="site-loader"></div>
-    </div>
-
-    <script src="js/scripts-dist.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
+  <script src="js/portfolio.js"></script>
+</body>
 </html>
