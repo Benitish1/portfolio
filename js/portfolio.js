@@ -87,6 +87,26 @@
     }
   });
 
+  /* ---------- Project filter ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.filter-bar .chip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#projects .project-card'));
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      chips.forEach(function (c) {
+        var on = c === chip;
+        c.classList.toggle('is-active', on);
+        c.setAttribute('aria-pressed', String(on));
+      });
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+        var show = f === 'all' || tags.indexOf(f) !== -1;
+        card.classList.toggle('is-hidden', !show);
+        if (show) card.classList.add('is-visible');
+      });
+    });
+  });
+
   /* ---------- Toast + copy ---------- */
   var toast = document.getElementById('toast');
   var toastTimer;
@@ -143,11 +163,15 @@
         : '';
       var stars = r.stargazers_count ? '<span>★ ' + r.stargazers_count + '</span>' : '';
       var desc = r.description ? esc(r.description) : 'No description yet — open the repository for details.';
-      return '<a class="repo-card" href="' + esc(r.html_url) + '" target="_blank" rel="noopener">' +
+      var live = /^https?:\/\//.test(r.homepage || '')
+        ? '<a class="repo-live" href="' + esc(r.homepage) + '" target="_blank" rel="noopener"><span class="live-dot"></span> Live demo</a>'
+        : '';
+      return '<div class="repo-card">' +
+        '<a class="stretched" href="' + esc(r.html_url) + '" target="_blank" rel="noopener" aria-label="' + esc(r.name) + ' on GitHub"></a>' +
         '<span class="repo-name"><svg><use href="#i-repo"/></svg>' + esc(r.name) + '</span>' +
-        '<span class="repo-desc">' + desc + '</span>' +
+        '<span class="repo-desc">' + desc + '</span>' + live +
         '<span class="repo-meta">' + lang + stars + '<span>Updated ' + timeAgo(r.pushed_at) + '</span></span>' +
-        '</a>';
+        '</div>';
     }).join('');
   }
 
@@ -159,7 +183,11 @@
     var opts = ctrl ? { signal: ctrl.signal } : {};
 
     fetch(api, opts).then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (u) { if (u && typeof u.public_repos === 'number') repoCount.textContent = u.public_repos; })
+      .then(function (u) { if (u && typeof u.public_repos === 'number') {
+        repoCount.textContent = u.public_repos;
+        var st = document.getElementById('stat-repos');
+        if (st) st.textContent = u.public_repos;
+      } })
       .catch(function () {});
 
     fetch(api + '/repos?sort=pushed&per_page=12', opts)

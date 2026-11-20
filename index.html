@@ -125,7 +125,7 @@
       <div class="container hero-grid">
         <div>
           <span class="status-pill reveal"><span class="status-dot"></span> Rwanda Coding Academy graduate · Kigali, Rwanda</span>
-          <h1 class="reveal">Benitha Ishimwe</h1>
+          <h1 class="reveal">Benitha <span class="grad">Ishimwe</span></h1>
           <p class="hero-role reveal">
             <span>Full-Stack Developer</span><span class="sep"></span>
             <span class="hl">Mobile Application Developer</span><span class="sep"></span>
@@ -148,6 +148,16 @@
             <span class="tag">Spring Boot</span>
             <span class="tag">Node.js</span>
             <span class="tag">PostgreSQL</span>
+          </div>
+          <div class="live-strip reveal">
+            <span class="live-strip-label"><span class="live-dot"></span> Try them live</span>
+            <div class="live-links">
+              <a href="https://cafe-elegance-lac.vercel.app" target="_blank" rel="noopener">Café Élégance <svg><use href="#i-external"/></svg></a>
+              <a href="https://dataset-desk-benitha.vercel.app" target="_blank" rel="noopener">Dataset Desk <svg><use href="#i-external"/></svg></a>
+              <a href="https://safe-guard-fems.vercel.app" target="_blank" rel="noopener">SafeGuard <svg><use href="#i-external"/></svg></a>
+              <a href="https://luxe-stay-mu.vercel.app/" target="_blank" rel="noopener">LuxeStay <svg><use href="#i-external"/></svg></a>
+              <a href="https://vehicle-analytics-system.vercel.app" target="_blank" rel="noopener">Vehicle ML <svg><use href="#i-external"/></svg></a>
+            </div>
           </div>
         </div>
 
@@ -207,6 +217,12 @@
     <!-- ===================== Focus strip ===================== -->
     <section aria-label="What I build">
       <div class="container">
+        <div class="stats-row reveal" aria-label="At a glance">
+          <div class="stat"><b data-count="5">5</b><span>live web apps</span></div>
+          <div class="stat"><b data-count="6">6</b><span>mobile apps</span></div>
+          <div class="stat"><b id="stat-repos" data-count="58">58</b><span>public repositories</span></div>
+          <div class="stat"><b>3</b><span>years at Rwanda Coding Academy</span></div>
+        </div>
         <div class="focus-grid reveal">
           <div class="focus-item is-primary">
             <div class="focus-icon"><svg><use href="#i-phone"/></svg></div>
@@ -259,7 +275,7 @@
               <h3>SupaMenu</h3>
               <p>A food-ordering app: browse restaurants and menus, fill a cart, check out and track orders. Includes login and register, light and dark mode, and works fully offline with AsyncStorage.</p>
               <div class="tags"><span class="tag">TypeScript</span><span class="tag">NativeWind</span><span class="tag">AsyncStorage</span></div>
-              <a class="repo-link" href="https://github.com/Benitish1/SupaMenu" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/SupaMenu</a>
+              <a class="repo-link" href="https://github.com/Benitish1/SupaMenu_Mobile" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Benitish1/SupaMenu_Mobile</a>
             </div>
           </article>
 
@@ -410,40 +426,90 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Featured projects</span>
-          <h2 class="section-title">Full-stack and systems work</h2>
+          <h2 class="section-title">Live products, not just repositories</h2>
           <p class="section-lead">
-            Web platforms, APIs, data dashboards and hardware projects — each one linked to its source on GitHub.
+            Web platforms, APIs, data dashboards and hardware projects. Most of them are deployed, so you can
+            open the live demo and click around, or read the source on GitHub.
           </p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="live" aria-pressed="false"><span class="live-dot"></span> Live demos</button>
+          <button class="chip" type="button" data-filter="web" aria-pressed="false">Full-stack web</button>
+          <button class="chip" type="button" data-filter="data" aria-pressed="false">Data &amp; AI</button>
+          <button class="chip" type="button" data-filter="embedded" aria-pressed="false">Embedded</button>
         </div>
 
         <div class="projects-grid">
 
-          <!-- SafeGuard -->
-          <article class="project-card reveal">
-            <div class="project-media has-bar sg-media" role="img" aria-label="SafeGuard sign-in page: Keep every building safe and compliant, next to a sign-in form">
-              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>SafeGuard · Sign in</span></div>
-              <div class="sg" aria-hidden="true">
-                <div class="sg-left">
-                  <div class="sg-logo"><span>🔥</span>SafeGuard</div>
-                  <div class="sg-flame">🔥</div>
-                  <h4>Keep every building <em>safe &amp; compliant.</em></h4>
-                  <p>Track extinguishers, schedule inspections, log maintenance and generate real-time compliance reports.</p>
-                  <small>✓ Secured with JWT + OTP verification</small>
-                </div>
-                <div class="sg-right">
-                  <div class="sg-toggle"><i></i></div>
-                  <div class="sg-form">
-                    <b>Sign in</b>
-                    <small>Access your fire-safety dashboard.</small>
-                    <label>Email</label><div class="sg-in">✉ you@tzw.com</div>
-                    <label>Password</label><div class="sg-in">🔒 ••••••••</div>
-                    <div class="sg-btn">Sign in</div>
-                    <small class="sg-alt">No account? <em>Create one</em></small>
-                  </div>
-                </div>
+          <!-- Café Élégance (featured) -->
+          <article class="project-card is-featured reveal" data-tags="live web" style="--proj:#c49a5c">
+            <a class="project-media has-bar" href="https://cafe-elegance-lac.vercel.app" target="_blank" rel="noopener" aria-label="Open the Café Élégance live site">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>cafe-elegance-lac.vercel.app</span></div>
+              <div class="shimmer"></div>
+              <img src="images/projects/cafe-elegance.jpg" alt="Café Élégance home page: The art of slow coffee, with latte art in an arched frame" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge is-live"><span class="live-dot"></span> Live</span>
+              <span class="media-hover" aria-hidden="true">Open live site <svg><use href="#i-external"/></svg></span>
+            </a>
+            <div class="project-body">
+              <span class="kicker">Featured · Full-stack web · Client-style site</span>
+              <h3>Café Élégance — Coffee House Website</h3>
+              <p class="desc">The website of a coffee house with salons in Kigali, Musanze and Rubavu. Guests can browse the menu, order online, pay, follow their delivery and book a table.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>Online ordering with Mobile Money or card payment, and delivery priced by the customer's location.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Live order tracking, table reservations, a gallery and a contact page.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Editorial design with Tailwind CSS on a small Node.js / Express backend, deployed on Vercel.</span></li>
+              </ul>
+              <div class="tags">
+                <span class="tag">HTML</span><span class="tag">Tailwind CSS</span><span class="tag">JavaScript</span>
+                <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Vercel</span>
               </div>
-              <span class="media-badge">UI</span>
+              <div class="card-actions">
+                <a class="btn btn-primary btn-sm" href="https://cafe-elegance-lac.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Visit live site</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/Cafe_Elegance" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
             </div>
+          </article>
+
+          <!-- Dataset Request Desk -->
+          <article class="project-card reveal" data-tags="live web data">
+            <a class="project-media has-bar" href="https://dataset-desk-benitha.vercel.app" target="_blank" rel="noopener" aria-label="Open the Dataset Request Desk live demo">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>dataset-desk-benitha.vercel.app</span></div>
+              <div class="shimmer"></div>
+              <img src="images/projects/dataset-desk.jpg" alt="Dataset Request Desk sign-in page: From request to robot data, tracked, with demo account buttons" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge is-live"><span class="live-dot"></span> Live</span>
+              <span class="media-hover" aria-hidden="true">Open live demo <svg><use href="#i-external"/></svg></span>
+            </a>
+            <div class="project-body">
+              <span class="kicker">Full-stack web · Python</span>
+              <h3>Dataset Request Desk</h3>
+              <p class="desc">An internal platform that replaces request spreadsheets: clients ask for robot-data episodes, operators match them from the recording library, and every handover is logged.</p>
+              <ul class="feature-list">
+                <li><svg><use href="#i-check"/></svg><span>FastAPI + PostgreSQL 16 with Alembic migrations, running serverless on Vercel with Neon.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Client and operator roles with per-client isolation, analytics and CSV import.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Dependency-free single-page UI served by the API.</span></li>
+              </ul>
+              <p class="demo-hint"><svg><use href="#i-star"/></svg> One-click demo accounts on the sign-in page: no sign-up needed.</p>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Alembic</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-primary btn-sm" href="https://dataset-desk-benitha.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/Dataset_Request_Desk" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SafeGuard -->
+          <article class="project-card reveal" data-tags="live web">
+            <a class="project-media has-bar" href="https://safe-guard-fems.vercel.app" target="_blank" rel="noopener" aria-label="Open the SafeGuard live app">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>safe-guard-fems.vercel.app</span></div>
+              <div class="shimmer"></div>
+              <img src="images/projects/safeguard.jpg" alt="SafeGuard sign-in page: Keep every building safe and compliant, next to a sign-in form" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge is-live"><span class="live-dot"></span> Live</span>
+              <span class="media-hover" aria-hidden="true">Open live app <svg><use href="#i-external"/></svg></span>
+            </a>
             <div class="project-body">
               <span class="kicker">Full-stack web · Microservices</span>
               <h3>SafeGuard — Fire Extinguisher Management</h3>
@@ -458,19 +524,21 @@
                 <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span>
               </div>
               <div class="card-actions">
-                <a class="btn btn-dark btn-sm" href="https://github.com/Benitish1/SafeGuard_FEMS" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
+                <a class="btn btn-primary btn-sm" href="https://safe-guard-fems.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/SafeGuard_FEMS" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
               </div>
             </div>
           </article>
 
           <!-- LuxeStay -->
-          <article class="project-card reveal">
-            <div class="project-media has-bar">
+          <article class="project-card reveal" data-tags="live web">
+            <a class="project-media has-bar" href="https://luxe-stay-mu.vercel.app/" target="_blank" rel="noopener" aria-label="Open the LuxeStay live demo">
               <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>luxe-stay-mu.vercel.app</span></div>
               <div class="shimmer"></div>
               <img src="images/projects/luxestay.jpg" alt="LuxeStay landing page with the headline Welcome to LuxeStay" loading="lazy" width="1280" height="800" class="is-loading">
-              <span class="media-badge">Live</span>
-            </div>
+              <span class="media-badge is-live"><span class="live-dot"></span> Live</span>
+              <span class="media-hover" aria-hidden="true">Open live demo <svg><use href="#i-external"/></svg></span>
+            </a>
             <div class="project-body">
               <span class="kicker">Full-stack web</span>
               <h3>LuxeStay — Hotel Management System</h3>
@@ -492,20 +560,21 @@
           </article>
 
           <!-- Vehicle Analytics -->
-          <article class="project-card reveal">
-            <div class="project-media has-bar">
-              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>vehicle-analytics-system.onrender.com</span></div>
+          <article class="project-card reveal" data-tags="live data">
+            <a class="project-media has-bar" href="https://vehicle-analytics-system.vercel.app" target="_blank" rel="noopener" aria-label="Open the Vehicle Analytics live demo">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>vehicle-analytics-system.vercel.app</span></div>
               <div class="shimmer"></div>
-              <img src="images/projects/vehicle-analytics.jpg" alt="Vehicle Insights Dashboard showing the client clustering analysis page" loading="lazy" width="1280" height="800" class="is-loading">
-              <span class="media-badge">Live</span>
-            </div>
+              <img src="images/projects/vehicle-analytics.jpg" alt="Vehicle ML landing page: Turn vehicle sales data into clear decisions, with dataset stats" loading="lazy" width="1280" height="800" class="is-loading">
+              <span class="media-badge is-live"><span class="live-dot"></span> Live</span>
+              <span class="media-hover" aria-hidden="true">Open live demo <svg><use href="#i-external"/></svg></span>
+            </a>
             <div class="project-body">
               <span class="kicker">Data &amp; machine learning</span>
               <h3>Vehicle Analytics System</h3>
-              <p class="desc">A Django dashboard that runs regression, classification and clustering models on vehicle data and presents the results visually.</p>
+              <p class="desc">A dashboard that runs regression, classification and clustering models on Rwandan vehicle-sales data and presents the results visually.</p>
               <ul class="feature-list">
-                <li><svg><use href="#i-check"/></svg><span>scikit-learn models for price prediction, client classification and K-Means segmentation.</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Interactive Plotly charts, including a Rwanda district map from GeoJSON.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>scikit-learn models for price prediction, income classification and K-Means segmentation.</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Interactive charts, including a map of all 30 Rwandan districts from GeoJSON.</span></li>
                 <li><svg><use href="#i-check"/></svg><span>Live inference form that combines model outputs into a customer profile.</span></li>
               </ul>
               <div class="tags">
@@ -513,14 +582,14 @@
                 <span class="tag">pandas</span><span class="tag">Plotly</span>
               </div>
               <div class="card-actions">
-                <a class="btn btn-primary btn-sm" href="https://vehicle-analytics-system.onrender.com/" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
+                <a class="btn btn-primary btn-sm" href="https://vehicle-analytics-system.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg> Live demo</a>
                 <a class="btn btn-ghost btn-sm" href="https://github.com/Benitish1/Vehicle_Analytics_System" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Repository</a>
               </div>
             </div>
           </article>
 
           <!-- RentEase -->
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-tags="web">
             <div class="project-media" aria-hidden="true">
               <div class="diagram">
                 <div class="d-caption">Role-based access</div>
@@ -554,7 +623,7 @@
           </article>
 
           <!-- Face recognition + IoT lock -->
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-tags="embedded data">
             <div class="project-media" aria-hidden="true">
               <div class="diagram">
                 <div class="d-row"><span class="d-node">Camera</span><span class="d-arrow">→</span><span class="d-node em">ArcFace · ONNX</span><span class="d-arrow">→</span><span class="d-node">MediaPipe tracking</span></div>
@@ -585,7 +654,7 @@
           </article>
 
           <!-- More -->
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-tags="embedded data web">
             <div class="project-media" aria-hidden="true">
               <div class="diagram">
                 <div class="d-caption">More on GitHub</div>
