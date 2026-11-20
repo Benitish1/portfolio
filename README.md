@@ -36,7 +36,6 @@ It's a static site with no build step and no dependencies:
 | SafeGuard FEMS | https://safe-guard-fems.vercel.app | [SafeGuard_FEMS](https://github.com/Benitish1/SafeGuard_FEMS) |
 | LuxeStay | https://luxe-stay-mu.vercel.app | [Luxe-Stay](https://github.com/Benitish1/Luxe-Stay) |
 | Vehicle Analytics System | https://vehicle-analytics-system.vercel.app | [Vehicle_Analytics_System](https://github.com/Benitish1/Vehicle_Analytics_System) |
-- `images/profile.jpg`: portrait
 
 Fonts (Inter, JetBrains Mono) load from Google Fonts. Icons are inline SVG.
 

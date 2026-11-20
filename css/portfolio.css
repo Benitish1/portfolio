@@ -1058,32 +1058,8 @@ a.bento-tile:hover .bento-cap { transform: none; opacity: 1; }
 .skill-list li { transition: border-color .2s ease, color .2s ease, transform .2s ease; }
 .skill-list li:hover { border-color: var(--accent); color: var(--text); transform: translateY(-2px); }
 
-/* About: portrait */
+/* About */
 .about-visual { gap: 22px; }
-.portrait { position: relative; padding: 14px; }
-.portrait-frame {
-  position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 720 / 820;
-  background: #0f141b; box-shadow: 0 40px 80px -40px rgba(0,0,0,.8);
-}
-.portrait-frame::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
-.portrait::before {
-  content: ""; position: absolute; inset: 0; border-radius: 34px; background: var(--grad); background-size: 220% 100%;
-  animation: grad-shift 9s ease-in-out infinite alternate; opacity: .9; z-index: -1;
-}
-.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-.p-chip {
-  position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
-  padding: 8px 13px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--text);
-  background: color-mix(in srgb, var(--surface) 88%, transparent); border: 1px solid var(--border-strong);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 16px 30px -14px rgba(0,0,0,.6);
-  animation: bob 7s ease-in-out infinite;
-}
-.p-chip svg { width: 15px; height: 15px; color: var(--accent-3); }
-.pc-1 { left: -14px; top: 18%; }
-.pc-2 { right: -14px; top: 46%; animation-delay: -2.5s; }
-.pc-2 svg { color: var(--accent); }
-.pc-3 { left: 10%; bottom: -6px; animation-delay: -5s; }
-.pc-3 svg { color: var(--accent-2); }
 
 /* Big CTA */
 .big-cta { position: relative; isolation: isolate; overflow: hidden; padding: 140px 0; text-align: center; border-top: 1px solid var(--border); }
@@ -1119,7 +1095,6 @@ a.bento-tile:hover .bento-cap { transform: none; opacity: 1; }
   .big-cta { padding: 96px 0; }
   .hero h1 { font-size: clamp(44px, 13vw, 64px); }
   .float-chip { display: none; }
-  .pc-1 { left: -4px; } .pc-2 { right: -4px; }
   .sm-back { width: 76%; } .sm-front { width: 84%; }
   .ts-serif { font-size: 64px; }
 }
