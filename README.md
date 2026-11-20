@@ -1,17 +1,20 @@
 # Benitha Ishimwe — Portfolio
 
-Personal portfolio of **Benitha Ishimwe**, a Full-Stack Developer and Mobile Application Developer and a graduate of **Rwanda Coding Academy** (Software Programming and Embedded Systems, 2023 – July 2026).
+Personal portfolio of **Benitha Ishimwe**, a UI/UX Designer, Full-Stack Developer and Mobile Application Developer and a graduate of **Rwanda Coding Academy** (Software Programming and Embedded Systems, 2023 – July 2026).
 
 ## What's on the site
 
 | Section | Contents |
 |---|---|
 | Hero | Name, role, short intro, GitHub / CV / projects buttons, "Try them live" links, phone previews |
+| Marquee | Scrolling strip of design and dev tools |
 | Stats | Live apps, mobile apps, public repositories (count updates from the GitHub API) |
+| Design | UI/UX section: bento gallery of real product screens, Café Élégance palette and type pairing, 4-step design process |
 | Mobile | SupaMenu, Lexora, TWatch, Mobile Notifications, ShopEase and ATELIER (React Native + Expo) |
 | Projects | Featured Café Élégance, then Dataset Request Desk, SafeGuard FEMS, LuxeStay, Vehicle Analytics System, RentEase, Face Recognition & IoT Lock, with filter chips (Live / Web / Data & AI / Embedded) |
 | Skills | Mobile, Frontend, Backend, Databases, Tools, Embedded & AI |
-| About | Background and education at Rwanda Coding Academy |
+| About | Portrait, designer + developer story, education at Rwanda Coding Academy |
+| Big CTA | "Let's make something people love" call to action |
 | GitHub | Live list of recently updated public repositories (GitHub REST API, with loading and error states); repos with a homepage set get a "Live demo" link |
 | Contact | Email, phone, GitHub, and a form that opens the visitor's email app |
 
